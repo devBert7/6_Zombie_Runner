@@ -5,6 +5,7 @@ using UnityEngine;
 public class Weapon : MonoBehaviour {
 	[SerializeField] Camera FPCam;
 	[SerializeField] float range = 100f;
+	[SerializeField] float weaponPower = 20f;
 
 	void Update() {
 		if (Input.GetButtonDown("Fire1")) {
@@ -15,9 +16,19 @@ public class Weapon : MonoBehaviour {
 	void Shoot() {
 		RaycastHit hit;
 
-		// (FromWhere, InWhatDirection, VariableToStoreRaycastHitPassedByReference, Range)
-		Physics.Raycast(FPCam.transform.position, FPCam.transform.forward, out hit, range);
+		// (FromWhere, InWhatDirection, VariableToStoreRaycastHitPassedByReference, DynamicRangeVariable)
+		if (Physics.Raycast(FPCam.transform.position, FPCam.transform.forward, out hit, range)) {
+			print("We've hit a " + hit.transform.name);
 
-		print("We've hit a " + hit.transform.name);
+			// todo: add visual fx to hit
+
+			EnemyHealth target = hit.transform.GetComponent<EnemyHealth>();
+			if (target == null) {
+				return;
+			}
+			target.TakeDamage(weaponPower);
+		} else {
+			return;
+		}
 	}
 }
