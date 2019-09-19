@@ -7,10 +7,9 @@ public class PlayerHealth : MonoBehaviour {
 
 	public void TakeDamage(float damage) {
 		hitPoints -= damage;
-		Debug.Log("Attacked In Frame " + Time.frameCount);
 
 		if (hitPoints <= 0) {
-			Debug.Log("You Dead!");
+			GetComponent<DeathHandler>().HandleDeath();
 		}
 	}
 }
