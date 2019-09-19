@@ -3,15 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyAttack : MonoBehaviour {
-	[SerializeField] Transform target;
 	[SerializeField] float damage = 40f;
+	
+	PlayerHealth target;
+
+	void Start() {
+		target = FindObjectOfType<PlayerHealth>();
+	}
 
 	public void AttackHitEvent() {
 		if (target == null) {
 			return;
 		}
 
-		PlayerHealth playerHealth = target.GetComponent<PlayerHealth>();
-		playerHealth.TakeDamage(damage);
+		target.TakeDamage(damage);
 	}
 }
