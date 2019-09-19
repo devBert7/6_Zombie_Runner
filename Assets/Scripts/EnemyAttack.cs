@@ -6,15 +6,12 @@ public class EnemyAttack : MonoBehaviour {
 	[SerializeField] Transform target;
 	[SerializeField] float damage = 40f;
 
-	void Start() {
-			
-	}
-
 	public void AttackHitEvent() {
 		if (target == null) {
 			return;
 		}
-		
-		Debug.Log("Bang!");
+
+		PlayerHealth playerHealth = target.GetComponent<PlayerHealth>();
+		playerHealth.TakeDamage(damage);
 	}
 }
