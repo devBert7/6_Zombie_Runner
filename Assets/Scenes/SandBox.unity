@@ -6402,10 +6402,6 @@ PrefabInstance:
       propertyPath: gameOverCanvas
       value: 
       objectReference: {fileID: 471022987}
-    - target: {fileID: 1610469732, guid: 3a31ae86cf7a4e54ab8ffba9d93364b9, type: 3}
-      propertyPath: zoomIn
-      value: 10
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a31ae86cf7a4e54ab8ffba9d93364b9, type: 3}
 --- !u!1001 &4455113356013705457
