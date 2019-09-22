@@ -181,7 +181,6 @@ GameObject:
   - component: {fileID: 4315364560609835361}
   - component: {fileID: 504444179366879078}
   - component: {fileID: 1882611888}
-  - component: {fileID: 1610469732}
   - component: {fileID: 1264373844959145792}
   m_Layer: 0
   m_Name: Player
@@ -330,22 +329,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverCanvas: {fileID: 0}
---- !u!114 &1610469732
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4315364560616361091}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd70089bae77b9b45b88d7a4430e8fd4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  zoomIn: 10
-  zoomOut: 60
-  zoomInSens: 0.5
-  zoomOutSens: 2
 --- !u!114 &1264373844959145792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -554,6 +537,11 @@ PrefabInstance:
       propertyPath: ammoSlot
       value: 
       objectReference: {fileID: 1264373844959145792}
+    - target: {fileID: 1488316754163725975, guid: 8205d90416217d74baec91a438250ca9,
+        type: 3}
+      propertyPath: fpsController
+      value: 
+      objectReference: {fileID: 4315364560609835361}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8205d90416217d74baec91a438250ca9, type: 3}
 --- !u!4 &4543603890029928408 stripped
