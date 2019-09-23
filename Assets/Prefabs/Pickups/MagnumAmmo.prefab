@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1940263572676567227}
   - component: {fileID: 8390993168582967891}
   m_Layer: 0
-  m_Name: AmmoPickup
+  m_Name: MagnumAmmo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -58,6 +58,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7616d275eeba064ca0067e734c87894, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ammoAmount: 10
+  ammoType: 0
 --- !u!1 &672445871922989480
 GameObject:
   m_ObjectHideFlags: 0
