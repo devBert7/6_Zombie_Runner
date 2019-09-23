@@ -9,6 +9,7 @@ public class Weapon : MonoBehaviour {
 	[SerializeField] ParticleSystem muzzleFlash;
 	[SerializeField] GameObject hitImpact;
 	[SerializeField] Ammo ammoSlot;
+	[SerializeField] AmmoType ammoType;
 	[SerializeField] float shootPeriod = 1f;
 
 	bool canShoot = true;
@@ -23,24 +24,24 @@ public class Weapon : MonoBehaviour {
 		canShoot = true;
 	}
 
-	// void Update() {
-	// 	if (Input.GetMouseButtonDown(0) && canShoot) {
-	// 		StartCoroutine(Shoot());
-	// 	}
-	// }
+	void Update() {
+		if (Input.GetMouseButtonDown(0) && canShoot) {
+			StartCoroutine(Shoot());
+		}
+	}
 
-	// IEnumerator Shoot() {
-	// 	canShoot = false;
+	IEnumerator Shoot() {
+		canShoot = false;
 
-	// 	if (ammoSlot.GetCurrentAmmo() > 0) {
-	// 		PlayMuzzleFlash();
-	// 		ProcessRaycast();
-	// 		ammoSlot.ReduceCurrentAmmo();
-	// 	}
+		if (ammoSlot.GetCurrentAmmo(ammoType) > 0) {
+			PlayMuzzleFlash();
+			ProcessRaycast();
+			ammoSlot.ReduceCurrentAmmo(ammoType);
+		}
 
-	// 	yield return new WaitForSeconds(shootPeriod);
-	// 	canShoot = true;
-	// }
+		yield return new WaitForSeconds(shootPeriod);
+		canShoot = true;
+	}
 
 	void PlayMuzzleFlash() {
 		muzzleFlash.Play();
