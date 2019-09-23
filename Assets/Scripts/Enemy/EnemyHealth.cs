@@ -5,13 +5,24 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour {
 	[SerializeField] float hitPoints = 100f;
 
+	bool isDead = false;
+
+	public bool IsDead() {
+		return isDead;
+	}
+
 	public void TakeDamage(float damage) {
 		// BroadcastMessage("OnDamageTaken");
 		GetComponent<EnemyAI>().OnDamageTaken();
 		hitPoints -= damage;
 
 		if (hitPoints <= 0) {
-			Destroy(gameObject);
+			if (isDead) {
+				return;
+			}
+			
+			isDead = true;
+			GetComponent<Animator>().SetTrigger("Die");
 		}
 	}
 }
