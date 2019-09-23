@@ -3,13 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Ammo : MonoBehaviour {
-	[SerializeField] int ammoAmount = 10;
+	// Shows each piece of information from the AmmoSlot class
+	[SerializeField] AmmoSlot[] ammoSlots;
 
-	public int GetCurrentAmmo() {
-		return ammoAmount;
+	// Makes class available to the inspector, and sends information to the AmmoSlot[] (array) to show ammoType && ammoAmount
+	[System.Serializable]	private class AmmoSlot {
+		public AmmoType ammoType;
+		public int ammoAmount;
 	}
 
-	public void ReduceCurrentAmmo() {
-		ammoAmount--;
-	}
+	// public int GetCurrentAmmo() {
+	// 	return ammoAmount;
+	// }
+
+	// public void ReduceCurrentAmmo() {
+	// 	ammoAmount--;
+	// }
 }
