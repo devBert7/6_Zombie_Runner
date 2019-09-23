@@ -12,6 +12,16 @@ public class WeaponZoom : MonoBehaviour {
 
 	bool isZoomed = false;
 
+	void OnDisable() {
+		Camera.main.fieldOfView = zoomOut;
+		fpsController.mouseLook.XSensitivity = zoomOutSens;
+		fpsController.mouseLook.YSensitivity = zoomOutSens;
+
+		if (isZoomed) {
+			isZoomed = !isZoomed;
+		}
+	}
+
 	void Update() {
 		if (Input.GetMouseButtonDown(1)) {
 			HandleZoom();
