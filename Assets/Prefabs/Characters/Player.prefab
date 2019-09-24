@@ -184,7 +184,7 @@ GameObject:
   - component: {fileID: 1264373844959145792}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -228,7 +228,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4315364560616361091}
   m_Material: {fileID: 13400000, guid: 9d5fd837c115eea488b14f070216f244, type: 2}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
   m_Height: 1.6
@@ -315,7 +315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 366c7d3d9c2e2394699bf16730cc96fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 100
+  hitPoints: 200
 --- !u!114 &1882611888
 MonoBehaviour:
   m_ObjectHideFlags: 0

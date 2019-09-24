@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour {
-	[SerializeField] float hitPoints = 100f;
+	[SerializeField] float hitPoints = 200f;
 
 	public void TakeDamage(float damage) {
 		hitPoints -= damage;
