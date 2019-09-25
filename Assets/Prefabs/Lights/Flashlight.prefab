@@ -45,7 +45,7 @@ Light:
   m_Color: {r: 0.745283, g: 0.745283, b: 0, a: 1}
   m_Intensity: 5
   m_Range: 31.6
-  m_SpotAngle: 63.46
+  m_SpotAngle: 65
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -82,3 +82,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ebf16609d6986e478bda6ef25abecf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lightDecay: 0.1
+  angleDecay: 1
+  minAngle: 40
+  minIntensity: 1.5
